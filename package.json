@@ -1,0 +1,32 @@
+{
+  "name": "lab-06-back-end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "lit": "eslint .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "start:watch": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allisonbusse/lab-06-back-end.git"
+  },
+  "keywords": [],
+  "author": "@hello-jelly & @allisonbusse",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/allisonbusse/lab-06-back-end/issues"
+  },
+  "homepage": "https://github.com/allisonbusse/lab-06-back-end#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.2.1",
+    "nodemon": "^1.19.1"
+  }
+}
