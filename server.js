@@ -2,6 +2,7 @@ require('dotenv').config();
 
 const express = require('express');
 const cors = require('cors');
+const moment = require('moment');
 
 const app = express();
 const PORT = process.env.PORT;
@@ -58,6 +59,7 @@ function getForcastTime(/*location*/) {
 
 function toWeather(/*darkSky*/) {
     const firstResult = geoData.results[0];
+    const timeString = moment('/Date(darkSky.daily.data[1].time/)').format('MM/DD/YYYY');
     
     return [{
         formatted_query: firstResult.formatted_address,
@@ -67,7 +69,7 @@ function toWeather(/*darkSky*/) {
     {
         formatted_query: firstResult.formatted_address,
         forecast: darkSky.daily.data[1].summary,
-        time: darkSky.daily.data[1].time
+        time: timeString
     },
     {
         formatted_query: firstResult.formatted_address,
