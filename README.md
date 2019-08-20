@@ -10,4 +10,4 @@ This app will provide visitors to Portland with a resource to look up locations 
 What steps does a user have to take to build this app on their own machine and get it running?
 
 ##Architecture
-Provide a detailed description of the app design. What technologies, languages, libraries, etc
+Javascript, Node, Dark Sky API, Google API, Nodemon Heroku and GitHub
