@@ -53,10 +53,10 @@ const darkSky = require('./data/darksky.json');
 
 function getForcastTime(/*location*/) {
     //api call will go here
-    return toLocation(darkSky);
+    return toWeather(darkSky);
 }
 
-function toLocation(/*darkSky*/) {
+function toWeather(/*darkSky*/) {
     const firstResult = geoData.results[0];
     const geometry = firstResult.geometry;
     
