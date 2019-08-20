@@ -59,11 +59,32 @@ function getForcastTime(/*location*/) {
 function toWeather(/*darkSky*/) {
     const firstResult = geoData.results[0];
     
-    return {
+    return [{
         formatted_query: firstResult.formatted_address,
         forecast: darkSky.daily.data[0].summary,
         time: darkSky.daily.data[0].time
-    };
+    },
+    {
+        formatted_query: firstResult.formatted_address,
+        forecast: darkSky.daily.data[1].summary,
+        time: darkSky.daily.data[1].time
+    },
+    {
+        formatted_query: firstResult.formatted_address,
+        forecast: darkSky.daily.data[2].summary,
+        time: darkSky.daily.data[2].time
+    },
+    {
+        formatted_query: firstResult.formatted_address,
+        forecast: darkSky.daily.data[3].summary,
+        time: darkSky.daily.data[3].time
+    },
+    {
+        formatted_query: firstResult.formatted_address,
+        forecast: darkSky.daily.data[4].summary,
+        time: darkSky.daily.data[4].time
+    }
+    ];
 }
 
 app.listen(PORT, () => {
