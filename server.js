@@ -58,7 +58,6 @@ function getForcastTime(/*location*/) {
 
 function toWeather(/*darkSky*/) {
     const firstResult = geoData.results[0];
-    const geometry = firstResult.geometry;
     
     return {
         formatted_query: firstResult.formatted_address,
